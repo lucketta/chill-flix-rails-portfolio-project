@@ -1,0 +1,6 @@
+<h3>
+  <% @user.shows.each do |show| %>
+  <%= link_to show.name, show_path(show.id) %></h3>
+  <p>airing: <%= show.air_date %> | <%= show.air_time if show.air_time%> pm
+  <% end %>
+</h3>

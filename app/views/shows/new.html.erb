@@ -1,0 +1,21 @@
+<h3>Add a New Show: </h3>
+
+<%= form_for @show do |f| %>
+
+  <p>
+    <%= f.label "Name"%>
+    <%= f.text_field :name %>
+
+    <%= f.label "Air Date"%>
+    <%= f.text_field :air_date %>
+
+    <%= f.label "Air Time"%>
+    <%= f.text_field :air_time %>
+
+    <%= f.label "Description"%>
+    <%= f.text_field :description %>
+
+    <br>
+    <%= f.submit %>
+</p>
+<% end %>
