@@ -1,4 +1,10 @@
 class Show < ApplicationRecord
+  validates :name, presence: true
+  validates :air_date, presence: true
+  validates :air_time, presence: true
+  validates :description, presence: true
+
+
   belongs_to :network
   has_many :programs
   has_many :users, through: :programs

@@ -1,7 +1,7 @@
 <h3>
   <% if current_user.present? %>
     <% current_user.shows.each do |show| %>
-      <h3> <%= link_to show.name, show_path(show.id) %></h3>
+      <h3> <%= link_to show.name, user_show_path(current_user, show) %></h3>
     <p>airing: <%= show.air_date %> | <%= show.air_time if show.air_time%> pm </p>
     <% end %>
   <% end %>

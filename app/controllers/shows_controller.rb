@@ -15,7 +15,12 @@ class ShowsController < ApplicationController
 
   def create
     @show = current_user.shows.create(show_params)
-    redirect_to user_show_path(current_user, @show.id)
+
+    if @show.valid?
+      redirect_to user_show_path(current_user, @show.id)
+    else
+      render :new
+    end
   end
 
   def edit

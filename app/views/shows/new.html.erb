@@ -1,5 +1,20 @@
 <h3>Add a New Show: </h3>
 
+<% if @show.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@show.errors.count, "error") %>
+      prohibited this show from being saved:
+    </h2>
+
+    <ul>
+    <% @show.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for(@show, url: user_shows_path(current_user)) do |f| %>
 
     <%= f.label "Name"%>
