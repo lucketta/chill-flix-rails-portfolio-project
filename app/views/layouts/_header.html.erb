@@ -1,7 +1,9 @@
 <nav class="">
   <% if user_signed_in? %>
     <p>Hello, <%= current_user.email %></p>
-    <p><%= link_to "Add new show", new_show_path if !current_page?(:controller => 'shows', :action => 'new') %> | <%= link_to "Sign out", destroy_user_session_path, method: :delete %> </p>
+
+    <p>
+      <%= link_to "My Shows", user_path(current_user) %> | <%= link_to "Add new show", new_user_show_path(current_user) if !current_page?(:controller => 'shows', :action => 'new') %> | <%= link_to "Log out", destroy_user_session_path, method: :delete %> </p>
   <% else %>
       <p><%= link_to "Sign Up", new_user_registration_path %> | <%= link_to "Log In", new_user_session_path %></p>
   <% end %>

@@ -1,6 +1,17 @@
 <h1><%= @show.name %></h1>
 
-<h3><%= @show.air_date %> | <%= @show.air_time %> pm</h3>
-<h3><%= @show.description %></h3>
+<% if !@show.genres.empty? %>
+  <% @show.genres.each do |genre| %>
+    <%= genre.name %> |
+  <% end %>
+<% end %>
 
-<p><%= link_to "Back To All Shows", chillflix_path %></p>
+<h3><%= @show.air_date %> | <%= @show.air_time %> pm</h3>
+
+<br>
+<h3>Description: </h3>
+<p><%= @show.description %></p>
+
+<br>
+<p><%= link_to "Back To All Shows", chillflix_path %> | <%= link_to "Edit Show", edit_show_path(@show) %> | <%= link_to "Delete Show", show_path(@show), method: :delete %>
+</p>

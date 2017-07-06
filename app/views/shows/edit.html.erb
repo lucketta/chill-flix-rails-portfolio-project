@@ -1,6 +1,6 @@
 <h3>Add a New Show: </h3>
 
-<%= form_for(@show, url: user_shows_path(current_user)) do |f| %>
+<%= form_for @show do |f| %>
 
     <%= f.label "Name"%>
     <%= f.text_field :name %>

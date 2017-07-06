@@ -25,3 +25,8 @@ madam_secretary.network = abc
 
 Program.create(user_id: areanna, show_id: blacklist, favorite: 0)
 Program.create(user_id: areanna, show_id: gilmore_girls, favorite: 1)
+
+
+drama = Genre.create(name: "drama")
+mystery = Genre.create(name: "mystery")
+idk = Genre.create(name: "idk")
