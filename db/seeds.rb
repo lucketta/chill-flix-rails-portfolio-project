@@ -2,6 +2,7 @@ User.destroy_all
 Show.destroy_all
 Network.destroy_all
 Program.destroy_all
+Genre.destroy_all
 
 test_test = User.create(email: "test@test.com", password: "testtest")
 areanna = User.create(email: "areanna@test.com", password: "areanna")

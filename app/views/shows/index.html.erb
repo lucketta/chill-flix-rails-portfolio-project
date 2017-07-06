@@ -1,7 +1,9 @@
+<h3>All Shows: </h3>
+<br>
 <h3>
   <% @shows.each do |show| %>
     <% if current_user.present? %>
-      <h3> <%= link_to show.name, user_show_path(current_user,show) %></h3>
+      <h3> <%= link_to show.name, show_path(show) %></h3>
     <% else %>
       <h3> <%= link_to show.name, show_path(show.id) %></h3>
     <% end %>

@@ -23,4 +23,14 @@ class Show < ApplicationRecord
       end
     end
   end
+
+
+  def self.add_to_shows(current_user, show_id)
+    show = current_user.shows.find_by(id: show_id)
+
+    if !show
+      current_user.shows << Show.find(show_id)
+      current_user.save
+    end
+  end
 end

@@ -34,9 +34,13 @@ class ShowsController < ApplicationController
   end
 
   def destroy
-    @show = Show.find(params[:id])
-    @show.destroy
-    redirect_to shows_path
+    current_user.shows.delete(Show.find(params[:id]))
+    redirect_to user_path(current_user)
+  end
+
+  def add_show
+    Show.add_to_shows(current_user, params[:id])
+    redirect_to user_path(current_user)
   end
 
   private
