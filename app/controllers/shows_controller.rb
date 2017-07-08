@@ -6,7 +6,11 @@ class ShowsController < ApplicationController
   end
 
   def show
-    @show = Show.find(params[:id])
+    @show = Show.find_by(id: params[:id])
+
+    if !@show
+      redirect_to chillflix_path
+    end
   end
 
   def new
