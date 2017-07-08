@@ -31,3 +31,5 @@ Program.create(user_id: areanna, show_id: gilmore_girls, favorite: 1)
 drama = Genre.create(name: "drama")
 mystery = Genre.create(name: "mystery")
 idk = Genre.create(name: "idk")
+
+#Show.joins(:users).group(:name).order("count_email desc").limit(1).count("email")

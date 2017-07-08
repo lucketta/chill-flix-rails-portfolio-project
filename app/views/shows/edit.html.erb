@@ -1,37 +1,5 @@
 <h3>Add a New Show: </h3>
 
 <%= form_for @show do |f| %>
-
-    <%= f.label "Name"%>
-    <%= f.text_field :name %>
-
-    <%= f.label "Air Date"%>
-    <%= f.text_field :air_date %>
-
-    <%= f.label "Air Time"%>
-    <%= f.text_field :air_time %>
-
-    <%= f.label "Description"%>
-    <%= f.text_field :description %>
-
-    <br>
-    <p>Choose a network:
-      <%= f.collection_select(:network_id, Network.all, :id, :name, prompt: true) %>
-    </p>
-
-    <br>
-    <p>Choose genres: </p>
-    <%= f.collection_check_boxes(:genre_ids, Genre.all, :id, :name, prompt: true) do |b| %>
-      <%= b.label do %>
-        <%= b.check_box + b.text %>
-        <% end %>
-      <% end %>
-
-      <%= f.fields_for :genres, Genre.new do |genre_builder| %>
-        Add new genre: <%= genre_builder.text_field :name %>
-      <% end %>
-
-      <br>
-
-    <%= f.submit %>
+  <%= render partial: "form", locals: {f: f} %>
 <% end %>

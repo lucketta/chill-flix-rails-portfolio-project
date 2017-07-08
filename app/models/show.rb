@@ -4,14 +4,12 @@ class Show < ApplicationRecord
   validates :air_time, presence: true
   validates :description, presence: true
 
-
   belongs_to :network
   has_many :programs
   has_many :users, through: :programs
 
   has_many :show_genres
   has_many :genres, through: :show_genres
-
 
   def genres_attributes=(genres_hashes)
     genres_hashes.each do |i, genre_attributes|
