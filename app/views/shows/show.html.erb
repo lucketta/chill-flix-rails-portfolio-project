@@ -15,7 +15,7 @@
 
 <br>
 
-<p><%= link_to "Edit Show", edit_show_path(@show) if signed_in? %></p>
-<p><%= link_to "Delete Show", show_path(@show), method: :delete if signed_in? %></p>
+<p><%= link_to "Edit Show", edit_show_path(@show) if params[:user_id] && params[:id] %></p>
+<p><%= link_to "Delete Show", show_path(@show), method: :delete if params[:user_id] && params[:id] %></p>
 <p><%= link_to "Add to My Shows", add_show_path(@show) if signed_in? %></p>
 <p><%= link_to "Back To All Shows", chillflix_path %> </p>
