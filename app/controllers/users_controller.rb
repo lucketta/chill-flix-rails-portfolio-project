@@ -8,4 +8,9 @@ class UsersController < ApplicationController
   def show
     if_signed_in?
   end
+
+  private
+
+  def user_params
+  end
 end

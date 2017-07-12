@@ -2,7 +2,7 @@ class User < ApplicationRecord
   extend Devise::Models
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
-         
+
   has_many :programs
   has_many :shows, through: :programs
 
