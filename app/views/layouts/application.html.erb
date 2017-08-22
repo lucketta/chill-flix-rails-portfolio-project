@@ -23,17 +23,23 @@
     <div class="main-page">
       <%= yield %>
     </div>
+
+    <!-- Prints All Shows using Handlebars -->
     <script id="index-template" type="text/x-handlebars-template">
+
       <h3>All Shows: </h3>
 
       {{#each this}}
-      <h3> <a href="/shows/{{id}}">{{name}}</a></h3>
-      <p>Airs: {{air_date}} | {{air_time}} pm</p>
+        <h3> <a href="/shows/{{id}}">{{name}}</a></h3>
+        <p>Airs: {{air_date}} | {{air_time}} pm</p>
       {{/each}}
+
     </script>
 
+    <!-- Prints Show Page Using Handlebars -->
+
     <script id="show-template" type="text/x-handlebars-template">
-      <!-- Prints Show Page -->
+
       <h1> {{show.name}} </h1>
       <!-- Prints Show's genres -->
       <p id="p-genre">{{get_genres genres}}</p>
@@ -55,5 +61,6 @@
 
       <br>
     </script>
+
   </body>
 </html>

@@ -36,5 +36,5 @@ drama = Genre.create(name: "drama")
 mystery = Genre.create(name: "mystery")
 period = Genre.create(name: "period")
 
-gilmore_girls.reviews << Review.create(content: "This was great!")
-gilmore_girls.reviews << Review.create(content: "BORING!")
+gilmore_girls.reviews << Review.create(content: "This was great!", username: "my_username", show_id: gilmore_girls.id)
+gilmore_girls.reviews << Review.create(content: "BORING!", username: "my_username", show_id: gilmore_girls.id)

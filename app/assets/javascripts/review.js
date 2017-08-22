@@ -4,9 +4,6 @@ function Review(attributes) {
   this.username = attributes.username
 }
 
-$(function(){
-  Review.templateSource = $()
-})
 
 Review.prototype.renderLI = function () {
   return Review.template(this)
@@ -22,7 +19,7 @@ $(function() {
 
     $.ajax({
       url: action,
-      data: params;
+      data: params,
       dataType: "json",
       method: "POST"
     })
