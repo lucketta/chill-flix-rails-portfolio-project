@@ -16,4 +16,4 @@
 //= require handlebars
 //= require index
 //= require show
-//= require favorite
+//= require review
