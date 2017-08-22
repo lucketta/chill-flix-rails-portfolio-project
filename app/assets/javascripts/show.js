@@ -12,10 +12,18 @@ $(function() {
   });
 });
 
-Handlebars.registerHelper('get_genres', function(show) {
+Handlebars.registerHelper('get_genres', function(genre) {
   var result = "";
-  for (var i = 0; i < show.length; i++) {
-    result += show[i].name + " | "
+  for (var i = 0; i < genre.length; i++) {
+    result += genre[i].name + " | "
+  }
+  return result
+});
+
+Handlebars.registerHelper('get_reviews', function(review) {
+  var result = "";
+  for (var i = 0; i < review.length; i++) {
+    result += "<li>" + review[i].content + "</li>"
   }
   return result
 });

@@ -3,6 +3,7 @@ Show.destroy_all
 Network.destroy_all
 Program.destroy_all
 Genre.destroy_all
+Review.destroy_all
 
 test_test = User.create(email: "test@test.com", password: "testtest")
 areanna = User.create(email: "areanna@test.com", password: "areanna")
@@ -34,3 +35,6 @@ third_user.shows << game
 drama = Genre.create(name: "drama")
 mystery = Genre.create(name: "mystery")
 period = Genre.create(name: "period")
+
+gilmore_girls.reviews << Review.create(content: "This was great!")
+gilmore_girls.reviews << Review.create(content: "BORING!")

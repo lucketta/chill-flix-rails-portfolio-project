@@ -11,6 +11,8 @@ class Show < ApplicationRecord
   has_many :show_genres
   has_many :genres, through: :show_genres
 
+  has_many :reviews
+
   def genres_attributes=(genres_hashes)
     genres_hashes.each do |i, genre_attributes|
       if genre_attributes[:name].present?

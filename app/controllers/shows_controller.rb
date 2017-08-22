@@ -15,14 +15,16 @@ class ShowsController < ApplicationController
     if current_user.present?
       @program = Program.find_by(user_id: current_user.id, show_id: @show.id)
     end
+
+    @review = @show.reviews.build
     if !@show
       redirect_to chillflix_path
     end
-    response = {show: @show, genres: @show.genres, program: @program}
+    response = {show: @show, genres: @show.genres, program: @program, reviews: @show.reviews}
 
     respond_to do |format|
      format.html { render :show }
-     format.json { render json: response}
+     format.json { render json: response, layout: false}
    end
   end
 
@@ -35,9 +37,8 @@ class ShowsController < ApplicationController
   def create
     if_signed_in?
     @show = current_user.shows.create(show_params)
-
     if @show.valid?
-      redirect_to user_show_path(current_user, @show.id)
+      render :show
     else
       render :new
     end
@@ -52,7 +53,6 @@ class ShowsController < ApplicationController
     if_signed_in?
     @show = Show.find(params[:id])
     @show.update(show_params)
-    redirect_to @show
   end
 
   def destroy
@@ -70,6 +70,6 @@ class ShowsController < ApplicationController
   private
 
   def show_params
-    params.require(:show).permit(:name,:air_date,:air_time,:description, :network_id, genre_ids:[], genres_attributes:[:name] )
+    params.require(:show).permit(:name,:air_date,:air_time,:description, :network_id, genre_ids:[], genres_attributes:[:name],review_ids:[], reviews_attributes:[:content])
   end
 end
