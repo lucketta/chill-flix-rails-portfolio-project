@@ -10,3 +10,11 @@ $(function() {
     e.preventDefault();
   });
 });
+
+Handlebars.registerHelper('get_genres', function(show) {
+  var result = "";
+  for (var i = 0; i < show.length; i++) {
+    result += show[i].name + " | "
+  }
+  return result
+});
