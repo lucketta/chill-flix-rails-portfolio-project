@@ -2,6 +2,7 @@
 
 Specs:
 - [x] Use jQuery for implementing new requirements
+  Jquery can be found in this project
 - [ ] Include a show resource rendered using jQuery and an Active Model Serialization JSON backend.
 - [ ] Include an index resource rendered using jQuery and an Active Model Serialization JSON backend.
 - [ ] Include at least one has_many relationship in information rendered via JSON and appended to the DOM.
