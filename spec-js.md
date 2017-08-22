@@ -3,7 +3,8 @@
 Specs:
 - [x] Use jQuery for implementing new requirements
   Jquery can be found in this project
-- [ ] Include a show resource rendered using jQuery and an Active Model Serialization JSON backend.
+- [x] Include a show resource rendered using jQuery and an Active Model Serialization JSON backend.
+  TV show page uses jquery and active model Serialization. no page refresh
 - [ ] Include an index resource rendered using jQuery and an Active Model Serialization JSON backend.
 - [ ] Include at least one has_many relationship in information rendered via JSON and appended to the DOM.
 - [ ] Use your Rails API and a form to create a resource and render the response without a page refresh.
