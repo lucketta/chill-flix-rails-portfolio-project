@@ -13,8 +13,8 @@ Specs:
   Added reviews to each show page. no page refresh
 - [x] Translate JSON responses into js model objects.
   Review into JS model object
-- [ ] At least one of the js model objects must have at least one method added by your code to the prototype.
-
+- [x] At least one of the js model objects must have at least one method added by your code to the prototype.
+  used the prototype method to add the content and username together
 Confirm
 - [ ] You have a large number of small Git commits
 - [x] Your commit messages are meaningful
