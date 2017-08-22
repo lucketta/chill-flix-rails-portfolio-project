@@ -64,3 +64,27 @@
   <p><%= link_to "Add to My Shows", add_show_path(@show)  %></p>
 <% end %>
 <p><%= link_to "Back To All Shows", chillflix_path %> </p>
+
+<script id="show-template" type="text/x-handlebars-template">
+  <!-- Prints Show Page -->
+  <h1> {{show.name}} </h1>
+  <!-- Prints Show's genres -->
+  <p id="p-genre">{{get_genres genres}}</p>
+
+  <p>Airs: {{show.air_date}} | {{show.air_time}} pm</p>
+
+  <br>
+
+  <h3>Description: </h3>
+  <p>{{show.description}}</p>
+  <br>
+
+  <h3>Reviews: </h3>
+  <ul>
+    {{#each reviews}}
+      <li>{{content}}</li>
+    {{/each}}
+  </ul>
+
+  <br>
+</script>

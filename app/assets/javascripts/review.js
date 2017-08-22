@@ -4,6 +4,14 @@ function Review(attributes) {
   this.username = attributes.username
 }
 
+$(function(){
+  Review.templateSource = $()
+})
+
+Review.prototype.renderLI = function () {
+  return Review.template(this)
+};
+
 $(function() {
   $("form.new_review").submit(function(e) {
     e.preventDefault();

@@ -22,3 +22,12 @@
   <p>Airs: <%= @favorite_show.air_date %> | <%= @favorite_show.air_time if @favorite_show.air_time%> pm</p>
 
 </div>
+
+<script id="index-template" type="text/x-handlebars-template">
+  <h3>All Shows: </h3>
+
+  {{#each this}}
+  <h3> <a href="/shows/{{id}}">{{name}}</a></h3>
+  <p>Airs: {{air_date}} | {{air_time}} pm</p>
+  {{/each}}
+</script>
