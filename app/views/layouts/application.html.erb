@@ -55,9 +55,10 @@
       <h3>Reviews: </h3>
       <ul>
         {{#each reviews}}
-          <li>{{content}}</li>
-           - {{username}}
-
+          {{#if content}}
+            <li>{{content}}</li>
+            - {{username}}
+          {{/if}}
         {{/each}}
       </ul>
 
