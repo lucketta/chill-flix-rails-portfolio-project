@@ -15,7 +15,7 @@ $(function() {
 Handlebars.registerHelper('get_genres', function(genre) {
   var result = "";
   for (var i = 0; i < genre.length; i++) {
-    result += genre[i].name + " | "
+    result += genre[i].name + " | ";
   }
-  return result
+  return result;
 });
