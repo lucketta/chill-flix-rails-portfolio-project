@@ -5,6 +5,7 @@ $(function() {
       $main.html("");
       var template = Handlebars.compile(document.getElementById("show-template").innerHTML);
       var result = template(json);
+
       $main.html(result);
     });
     e.preventDefault();
@@ -17,4 +18,8 @@ Handlebars.registerHelper('get_genres', function(show) {
     result += show[i].name + " | "
   }
   return result
+});
+
+Handlebars.registerHelper('favorite_form', function(program) {
+  debugger;
 });

@@ -10,6 +10,8 @@ class ProgramsController < ApplicationController
   # GET /programs/1
   # GET /programs/1.json
   def show
+    binding.pry
+    @program = Program.find_by(user_id: params[:id])
   end
 
   # GET /programs/new

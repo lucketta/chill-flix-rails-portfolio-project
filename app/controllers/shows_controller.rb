@@ -15,14 +15,14 @@ class ShowsController < ApplicationController
     if current_user.present?
       @program = Program.find_by(user_id: current_user.id, show_id: @show.id)
     end
-
     if !@show
       redirect_to chillflix_path
     end
-    
+    response = {show: @show, genres: @show.genres, program: @program}
+
     respond_to do |format|
      format.html { render :show }
-     format.json { render json: @show}
+     format.json { render json: response}
    end
   end
 
