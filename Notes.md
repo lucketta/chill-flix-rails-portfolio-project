@@ -20,3 +20,14 @@ $(function() {
     e.preventDefault();
   });
 });
+
+
+
+<br>
+<h3> Your Favorite Shows: </h3>
+  <% @programs.each do |program| %>
+    <% show = Show.find(program.show_id) %>
+    <%= link_to show.name, show_path(show), class: "js-show" if program.nickname.nil? %>
+    <%= link_to program.nickname, show_path(show), class: "js-show" if !program.nickname.nil? %>
+  <br>
+  <% end %>

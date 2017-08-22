@@ -9,14 +9,7 @@
       <% end %>
         <p>airing: <%= show.air_date %> | <%= show.air_time if show.air_time%> pm </p>
     <% end %>
-      <br>
-      <h3> Your Favorite Shows: </h3>
-        <% @programs.each do |program| %>
-          <% show = Show.find(program.show_id) %>
-          <%= link_to show.name, show_path(show), class: "js-show" if program.nickname.nil? %>
-          <%= link_to program.nickname, show_path(show), class: "js-show" if !program.nickname.nil? %>
-        <br>
-        <% end %>
+      
   <% else %>
     <p>You have no shows</p>
   <% end %>

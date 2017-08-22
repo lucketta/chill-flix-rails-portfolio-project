@@ -33,8 +33,16 @@ third_user.shows << game
 
 
 drama = Genre.create(name: "drama")
+fantasy = Genre.create(name: "fantasy")
 mystery = Genre.create(name: "mystery")
 period = Genre.create(name: "period")
+
+gilmore_girls.genres << drama
+madam_secretary.genres << drama
+blacklist.genres << drama
+game.genres << drama
+game.genres << fantasy
+
 
 gilmore_girls.reviews << Review.create(content: "This was great!", username: "my_username", show_id: gilmore_girls.id)
 gilmore_girls.reviews << Review.create(content: "BORING!", username: "my_username", show_id: gilmore_girls.id)
