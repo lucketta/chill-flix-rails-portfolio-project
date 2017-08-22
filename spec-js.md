@@ -11,7 +11,8 @@ Specs:
   My has-many relationship is Genres which renders without a page refresh
 - [x] Use your Rails API and a form to create a resource and render the response without a page refresh.
   Added reviews to each show page. no page refresh
-- [ ] Translate JSON responses into js model objects.
+- [x] Translate JSON responses into js model objects.
+  Review into JS model object
 - [ ] At least one of the js model objects must have at least one method added by your code to the prototype.
 
 Confirm
