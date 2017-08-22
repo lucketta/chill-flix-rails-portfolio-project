@@ -19,11 +19,3 @@ Handlebars.registerHelper('get_genres', function(genre) {
   }
   return result
 });
-
-Handlebars.registerHelper('get_reviews', function(review) {
-  var result = "";
-  for (var i = 0; i < review.length; i++) {
-    result += "<li>" + review[i].content + "</li>"
-  }
-  return result
-});

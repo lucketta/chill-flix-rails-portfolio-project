@@ -45,7 +45,7 @@ class ProgramsController < ApplicationController
     respond_to do |format|
       if @program.update(program_params)
         @show = Show.find(params[:program][:show_id])
-        format.html { redirect_to @show, notice: 'Program was successfully updated.' }
+        format.html { redirect_to user_path(current_user) }
         format.json { render :show, status: :ok, location: @program }
       end
     end

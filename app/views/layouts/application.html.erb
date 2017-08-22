@@ -48,7 +48,9 @@
 
       <h3>Reviews: </h3>
       <ul>
-      {{get_reviews reviews}}
+        {{#each reviews}}
+          <li>{{content}}</li>
+        {{/each}}
       </ul>
 
       <br>
