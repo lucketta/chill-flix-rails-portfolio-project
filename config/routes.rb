@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root "shows#index", as: "chillflix"
 
   resources :users do
-    resources :shows
+    resources :shows, only: [:new]
   end
   resources :shows
 

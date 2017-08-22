@@ -2,15 +2,29 @@
 <p>
   <% if current_user.present? && !current_user.shows.empty?%>
     <% current_user.shows.each do |show| %>
-        <h3> <%= link_to show.name, user_show_path(current_user, show) %></h3>
+      <% if nickname = current_user.programs.find_by(show_id: show.id).nickname %>
+        <h3> <%= link_to nickname, show_path(show), class: "js-show" %></h3>
+      <% else %>
+        <h3> <%= link_to show.name, show_path(show), class: "js-show" %></h3>
+      <% end %>
         <p>airing: <%= show.air_date %> | <%= show.air_time if show.air_time%> pm </p>
     <% end %>
+      <br>
+      <h3> Your Favorite Shows: </h3>
+        <% @programs.each do |program| %>
+          <% show = Show.find(program.show_id) %>
+          <%= link_to show.name, show_path(show), class: "js-show" if program.nickname.nil? %>
+          <%= link_to program.nickname, show_path(show), class: "js-show" if !program.nickname.nil? %>
+        <br>
+        <% end %>
   <% else %>
     <p>You have no shows</p>
   <% end %>
 </p>
 
 
+
+
 <br>
 
-<p><%= link_to "Back To All Shows", chillflix_path %></p>
+<p><%= link_to "Back To All Shows", chillflix_path, class: "js-all-shows" %></p>

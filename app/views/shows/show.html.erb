@@ -1,4 +1,4 @@
-<h1><%= @show.name %></h1>
+<h1><%= @show.name %> </h1>
 
 <% if !@show.genres.empty? %>
   <% @show.genres.each do |genre| %>
@@ -14,8 +14,22 @@
 <p><%= @show.description %></p>
 
 <br>
+<% if @program %>
+  <%= form_for(@program, url: program_path(@program)) do |f| %>
+    <p>Add to Favorites:
+      <%= f.check_box :favorite,{}%>
+    </p>
+    <%= f.hidden_field :show_id, :value => @show.id %>
+        <%= f.submit "Add to Favorite" %>
+    <% end %>
+<% end %>
+  <br>
+
 
 <p><%= link_to "Edit Show", edit_show_path(@show) if params[:user_id] && params[:id] %></p>
 <p><%= link_to "Delete Show", show_path(@show), method: :delete if params[:user_id] && params[:id] %></p>
-<p><%= link_to "Add to My Shows", add_show_path(@show) if signed_in? %></p>
+
+<% if signed_in? && !Program.find_by(user_id: current_user.id, show_id: @show.id) %>
+  <p><%= link_to "Add to My Shows", add_show_path(@show)  %></p>
+<% end %>
 <p><%= link_to "Back To All Shows", chillflix_path %> </p>

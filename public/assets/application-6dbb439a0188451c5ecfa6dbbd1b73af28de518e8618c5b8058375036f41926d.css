@@ -1,0 +1,168 @@
+/* line 1, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 25, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 29, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 39, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 44, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 49, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 53, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 59, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 66, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 76, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 82, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 1, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/shows.scss */
+.flexwrapper {
+  margin-left: -1em;
+}
+
+/* line 5, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/shows.scss */
+.flexwrapper > section {
+  float: left;
+  width: 25%;
+  border-left: 1em solid #eff5f5;
+  box-sizing: border-box;
+  margin-bottom: .5em;
+  padding-top: 25%;
+}
+
+/* line 14, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/shows.scss */
+.flexwrapper > section:nth-child(1) {
+  background: #a9cc5b;
+}
+
+/* line 15, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/shows.scss */
+.flexwrapper > section:nth-child(2) {
+  background: #39b4e0;
+}
+
+/* line 16, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/shows.scss */
+.flexwrapper > section:nth-child(3) {
+  background: #e4582b;
+}
+
+/* line 17, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/shows.scss */
+.flexwrapper > section:nth-child(4) {
+  background: #f8c624;
+}
+
+/* Decorative bits and bobs */
+/* line 27, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/shows.scss */
+body {
+  font: 1.125em/1.4 'Tahoma', sans-serif;
+  background: #eff5f5;
+  color: #000;
+}
+
+/* line 28, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/shows.scss */
+h1 {
+  font-weight: 900;
+  font-size: 1.6em;
+  line-height: 1.2;
+}
+
+/* line 29, /Users/AreannaLuckett1/Development/portfolio_projects/rails_portfolio_project/ChillFlix/app/assets/stylesheets/shows.scss */
+h2 {
+  font-weight: 400;
+  font-size: 1em;
+  color: #597a80;
+  text-transform: uppercase;
+  margin: .5em 0 4em;
+  letter-spacing: .25em;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

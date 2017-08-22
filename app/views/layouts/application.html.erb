@@ -5,7 +5,8 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
+
   </head>
 
   <body>
@@ -18,6 +19,27 @@
 
     <%= render 'layouts/header' %>
 
-    <%= yield %>
+
+    <div class="main-page">
+      <%= yield %>
+    </div>
+
   </body>
+
+  <script id="index-template" type="text/x-handlebars-template">
+    <h3>All Shows: </h3>
+
+    {{#each this}}
+    <h3> <a href="/shows/{{id}}">{{name}}</a></h3>
+    <p>Airs: {{air_date}} | {{air_time}} pm</p>
+    {{/each}}
+  </script>
+
+  <script id="show-template" type="text/x-handlebars-template">
+    <h1> {{name}} </h1>
+    <p>Airs: {{air_date}} | {{air_time}} pm</p>
+    <br>
+    <h3>Description: </h3>
+    <p>{{description}}</p>
+  </script>
 </html>

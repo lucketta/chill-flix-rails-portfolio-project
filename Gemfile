@@ -8,9 +8,13 @@ gem 'omniauth-github'
 gem "rb-fsevent", "0.9.8"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
+gem 'jquery-rails'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem 'pundit'
+gem 'active_model_serializers'
+gem 'sprockets'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -32,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'pry'
+gem 'compass'
+gem 'breakpoint'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

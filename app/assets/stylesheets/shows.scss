@@ -1,3 +1,41 @@
-// Place all the styles related to the Shows controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.flexwrapper {
+  margin-left: -1em;
+}
+
+.flexwrapper > section {
+	float: left;
+	width: 25%;
+	border-left: 1em solid #eff5f5;
+  box-sizing: border-box;
+	margin-bottom: .5em;
+	padding-top: 25%;
+}
+
+.flexwrapper > section:nth-child(1) { background: #a9cc5b; }
+.flexwrapper > section:nth-child(2) { background: #39b4e0; }
+.flexwrapper > section:nth-child(3) { background: #e4582b; }
+.flexwrapper > section:nth-child(4) { background: #f8c624; }
+
+
+
+
+
+
+
+/* Decorative bits and bobs */
+
+body {
+  font: 1.125em/1.4 'Tahoma', sans-serif; background: #eff5f5; color: #000;
+}
+h1 {
+  font-size: 1.6em;  text-transform: uppercase; line-height: 1.2;
+  }
+h2 {
+  font-size: 1em; color: #597a80; text-transform: uppercase; margin: .5em 0 4em; letter-spacing: .15em;
+}
+h3 {
+  font-size: 1em; color: #597a80; text-transform: uppercase; letter-spacing: .15em;
+}
+p {
+  font-size: .7em; color: #597a80; text-transform: uppercase; letter-spacing: .1em;
+}

@@ -4,13 +4,9 @@ class UsersController < ApplicationController
     if_signed_in?
   end
 
-
   def show
     if_signed_in?
-  end
+    @programs = Program.where(user_id: current_user.id, favorite: true)
 
-  private
-
-  def user_params
   end
 end

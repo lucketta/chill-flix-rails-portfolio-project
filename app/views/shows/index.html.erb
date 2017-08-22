@@ -1,4 +1,7 @@
-<h3>All Shows: </h3>
+<div id="wrapper">
+  <header id="header">
+    <h3>All Shows: </h3>
+  </header>
 <h3>
   <% @shows.each do |show| %>
     <% if current_user.present? %>
@@ -17,3 +20,5 @@
 <h3>Users Favorite Show:</h3>
   <h3><%= link_to @favorite_show.name, show_path(@favorite_show) %></h3>
   <p>Airs: <%= @favorite_show.air_date %> | <%= @favorite_show.air_time if @favorite_show.air_time%> pm</p>
+
+</div>
