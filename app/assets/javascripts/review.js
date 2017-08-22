@@ -4,19 +4,17 @@ function Review(attributes) {
   this.username = attributes.username
 }
 
-
 Review.prototype.renderLI = function () {
-  return Review.template(this)
+  return "<li>" + this.content + "<br> - " + this.username + "</li>"
 };
 
 $(function() {
-  $("form.new_review").submit(function(e) {
+  $("form#new_review").submit(function(e) {
     e.preventDefault();
 
     var $form = $(this);
     var action = $form.attr('action');
     var params = $form.serialize();
-
     $.ajax({
       url: action,
       data: params,

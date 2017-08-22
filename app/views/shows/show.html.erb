@@ -23,7 +23,9 @@
     <% else %>
       <% @show.reviews.each do |review| %>
           <% if review.content %>
-            <li><%= review.content %></li>
+            <li><%= review.content %>
+            <br>
+            -  <%= review.username %></li>
           <% end %>
       <% end %>
     <% end %>
@@ -38,10 +40,12 @@
   <%= form_for(@review) do |f| %>
   <%= f.hidden_field :show_id, :value => @show.id %>
 
-    <p>Add a Review:
-      <%= f.text_field :content %>
-    </p>
-        <%= f.submit "Add Review" %>
+    <p>Add a Review: </p>
+      <%= f.text_area :content %>
+    <p>Username: </p>
+      <%= f.text_field :username %>
+      <br>
+    <%= f.submit "Add Review" %>
     <% end %>
 
     <br>
