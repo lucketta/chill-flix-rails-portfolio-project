@@ -19,7 +19,3 @@ Handlebars.registerHelper('get_genres', function(show) {
   }
   return result
 });
-
-Handlebars.registerHelper('favorite_form', function(program) {
-  debugger;
-});
