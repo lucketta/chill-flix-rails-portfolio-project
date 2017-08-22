@@ -19,7 +19,7 @@ class ShowsController < ApplicationController
     if !@show
       redirect_to chillflix_path
     end
-
+    
     respond_to do |format|
      format.html { render :show }
      format.json { render json: @show}
