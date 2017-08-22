@@ -36,10 +36,16 @@
   </script>
 
   <script id="show-template" type="text/x-handlebars-template">
+    <!-- Prints Show Page -->
     <h1> {{name}} </h1>
-    {{get_genres this.genres}}
+
+    <!-- Prints Show's genres -->
+    <p id="p-genre">{{get_genres this.genres}}</p>
+
     <p>Airs: {{air_date}} | {{air_time}} pm</p>
+
     <br>
+    
     <h3>Description: </h3>
     <p>{{description}}</p>
   </script>
